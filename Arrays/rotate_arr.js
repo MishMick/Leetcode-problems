@@ -25,3 +25,19 @@ var rotate = function(nums, k) {
 * Runtime: 620 ms, faster than 5.63% of JavaScript online submissions for Rotate Array.
 * Memory Usage: 35.2 MB, less than 81.13% of JavaScript online submissions for Rotate Array.
 */
+
+/* Better solution(JAVA)
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int len = nums.length;
+        if(k>len)
+            k=k%len;
+        if(k!=0){
+            int arr[] = nums.clone();
+            for(int i=0;i<len;i++){
+                nums[i]=arr[(len+i-k)%len];
+            }
+        }
+    }
+}
+*/
