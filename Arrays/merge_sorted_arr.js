@@ -15,6 +15,16 @@ var merge = function(nums1, m, nums2, n) {
     return nums1.sort((a, b) => a - b);
 };
 
+/* Elegant solution: 
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for(int i = m, j = 0; i < m+n && j < n; i++, j++)
+            nums1[i] = nums2[j];
+        Arrays.sort(nums1);        
+    }
+}
+*/
+
 /* Performance 
 *   Runtime: 52 ms, faster than 88.63% of JavaScript online submissions for Merge Sorted Array.
 *   Memory Usage: 35.1 MB, less than 7.92% of JavaScript online submissions for Merge Sorted Array.
