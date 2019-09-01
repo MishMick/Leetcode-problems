@@ -53,3 +53,8 @@ class Solution {
 Runtime: 1 ms, faster than 99.07% of Java online submissions for Palindrome Linked List.
 Memory Usage: 39.9 MB, less than 98.78% of Java online submissions for Palindrome Linked List.
 */
+
+/* Knowledge gaps encountered: 
+1) How to find midpoint of the linked list?
+2) How to iteratively reverse the linked list?
+*/
