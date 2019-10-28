@@ -7,6 +7,7 @@ class Solution {
             return start;
         int mid = start + (end - start)/2;
         if(nums[mid] > nums[mid+1])
+            // reducing the search space
             return search(nums, start, mid);
         return search(nums, mid+1, end);
     }
