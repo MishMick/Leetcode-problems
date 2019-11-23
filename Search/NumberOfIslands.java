@@ -19,7 +19,6 @@ class Solution {
         int m = grid.length;
         if (m == 0) return 0;
         int n = grid[0].length;
-        Queue<int[]> q = new LinkedList<>();
         for(int row=0;row<m;row++){
             for(int col=0;col<n;col++){
                 if(grid[row][col] == LAND){
