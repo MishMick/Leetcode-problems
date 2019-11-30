@@ -49,3 +49,8 @@ class Solution {
         return freshOranges == 0 ? count-1: -1;
     }
 }
+
+/* Performance: 
+Runtime: 2 ms, faster than 85.05% of Java online submissions for Rotting Oranges.
+Memory Usage: 38.1 MB, less than 81.25% of Java online submissions for Rotting Oranges.
+*/
