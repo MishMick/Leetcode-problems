@@ -1,20 +1,29 @@
 import java.util.*;
+
 class Solution {
-    public int findKthLargest(int[] nums, int k) {
-        int result = 0;
-        PriorityQueue<Integer> heap = new PriorityQueue<>(nums.length, (a,b) -> (b-a));
-        for(int n: nums){
-            heap.add(n);
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        List<Integer> result = new ArrayList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int x: nums){
+            map.put(x, map.getOrDefault(x,0)+1);
         }
         
-        for(int i=0;i<k;i++){
-            result = heap.poll();
+        PriorityQueue<Map.Entry<Integer, Integer>> heap = new PriorityQueue<>((a,b) -> ( b.getValue() - a.getValue() ));
+        
+        for(Map.Entry<Integer, Integer> entry: map.entrySet())
+        {
+            heap.add(entry);
         }
+    
+        for(int i=0;i<k;i++){
+            result.add(heap.poll().getKey());
+        }
+
         return result;
     }
 }
 
-/*
-Runtime: 7 ms, faster than 53.68% of Java online submissions for Kth Largest Element in an Array.
-Memory Usage: 36.4 MB, less than 90.67% of Java online submissions for Kth Largest Element in an Array.
+/* Performance: 
+Runtime: 12 ms, faster than 79.84% of Java online submissions for Top K Frequent Elements.
+Memory Usage: 40.5 MB, less than 68.10% of Java online submissions for Top K Frequent Elements.
 */
