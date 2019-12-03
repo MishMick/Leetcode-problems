@@ -5,7 +5,7 @@ class Solution {
                 return N;
             }
             N++;
-            if (10000000 < N && N < 100000000)
+            if (10000000 < N && N < 100000000)  // Mathematical proof
                 N = 100000000;
         }
     }
